@@ -1,0 +1,290 @@
+.noInternet .container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+}
+
+/* ------------------------------------------------------------------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --main-color: #007bff;
+}
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif !important;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 200;
+}
+
+main {
+  margin-top: 70px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav li a {
+  display: block;
+  color: #000;
+  min-width: 80px;
+  padding: 3px;
+  margin: 0px 4px;
+}
+
+/* ------------------------------------------------------------------------- */
+
+/* ------------------------- form ------------------------------------------ */
+
+.section-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 50%;
+  text-align: center;
+  /* background-color: #0a9e02; */
+  padding: 30px;
+}
+
+.section-form h2 {
+  font-size: 50px;
+  letter-spacing: 2px;
+  color: #fff;
+  color: var(--main-color);
+}
+.section-form form {
+  padding: 30px 25px 25px 25px;
+}
+.section-form form .row {
+  height: 45px;
+  margin-bottom: 15px;
+  position: relative;
+}
+.section-form form .row input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding-left: 60px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+form .row input:focus {
+  border-color: var(--main-color);
+  box-shadow: inset 0px 0px 2px 2px #4194ed;
+}
+form .row input::placeholder {
+  color: #999;
+}
+.section-form form .row i {
+  position: absolute;
+  width: 47px;
+  height: 100%;
+  color: #fff;
+  font-size: 18px;
+  background: var(--main-color);
+  border: 1px solid var(--main-color);
+  border-radius: 5px 0 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section-form form .pass {
+  margin: -8px 0 20px 0;
+}
+.section-form form .pass a {
+  color: var(--main-color);
+  font-size: 17px;
+  text-decoration: none;
+}
+.section-form form .pass a:hover {
+  text-decoration: underline;
+}
+.section-form form .button input {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  padding-left: 0px;
+  background: var(--main-color);
+  border: 1px solid var(--main-color);
+  cursor: pointer;
+}
+form .button input:hover {
+  background: var(--main-color);
+}
+.section-form form .signup-link {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 17px;
+}
+.section-form form .signup-link a {
+  color: var(--main-color);
+  text-decoration: none;
+}
+form .signup-link a:hover {
+  text-decoration: underline;
+}
+/* .section-form form input {
+  display: block;
+  width: 100%;
+  margin: 5px 0px;
+  height: 30px;
+  border: 1px solid #ddd;
+  padding: 5px;
+  font-family: cursive;
+  outline: none;
+  /* input not inherint from body لا يخضع لقوانين البادي*/
+
+/* .section-form form input[type="submit"]:hover {
+  opacity: 0.5;
+} */
+#user {
+  /* color: #fff; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-transform: capitalize;
+  display: none;
+}
+
+nav ul#userInfo {
+  margin: 1rem 0rem;
+  display: none;
+}
+
+nav ul#userInfo li i {
+  color: #000;
+  font-size: 25px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+nav ul#userInfo li {
+  position: relative;
+}
+
+nav ul#userInfo li .badge {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  color: #007bff;
+  text-align: center;
+  /* display: block; */
+  border-radius: 50%;
+  top: -8px;
+  right: 16px;
+  font-size: 15px;
+  display: none;
+}
+nav #links li a,
+#logOut {
+  color: #fff;
+}
+
+.ViewPro {
+  width: 94%;
+}
+/* bg-light text-primary pr-4 text-center m-auto */
+/* ---------------------------------------------------------------------------------------------------------------- */
+/* --------------------------------- home --------------------------------- */
+.Home {
+  margin: 5rem auto;
+  padding: 0 3rem;
+  position: relative;
+}
+
+.fas {
+  color: #007bff;
+}
+
+.far {
+  color: #5bc0de;
+}
+
+.cartsProudect {
+  position: absolute;
+  width: 300px;
+  transform: translate(-105px, 0);
+  top: 51px;
+  border: 1px solid #007bff;
+  display: none;
+}
+
+.buyProudect {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 0.5rem;
+}
+
+.buyProudect .mins,
+.buyProudect .pls {
+  height: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+.buyProudect .pls {
+  padding: 0px 20px 25px 10px;
+}
+.buyProudect .mins {
+  padding: 0px 17px 25px 13px;
+}
+.buyProudect div {
+  background-color: #fff;
+  padding: 0.5rem 0rem;
+  color: #007bff;
+  border-radius: 5px;
+}
+
+.product-item-action i {
+  font-size: 30px;
+  cursor: pointer;
+}
+.card {
+  cursor: pointer;
+  transition: 0.3s;
+}
+.card:hover {
+  box-shadow: 0 2px 10px #007bff;
+}
+.card .product-item-action .RemoveFromCartBtn {
+  display: none;
+}
+
+.card .product-item-action .AddToCartBtn {
+  display: inline-block;
+}
+
+.fav {
+  margin: 3rem 0rem 5rem 0rem;
+}
+
+.line {
+  width: 100px;
+  margin: auto;
+  height: 2px;
+  background-color: #007bff;
+}
+.fav-Header:hover .line {
+  transform: scale(1.5);
+  transition: 0.5s;
+}
+
+/* ----------------------------- */

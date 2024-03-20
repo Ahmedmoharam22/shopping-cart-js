@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UV-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>proudects Page</title>
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.xyz/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+</head>
+
+<body>
+
+    <header class="bg-primary" style="height: 70px;">
+        <div class="container">
+            <div class="header-content d-flex justify-content-between">
+
+                <a href="index.html" class="brand d-inline">
+                    <img  src="images/logo.png" alt="Logo" id="logo-image" width="80px" height="70px">
+                </a>
+
+                <nav class="d-flex justify-content-between align-items-center">
+                    <ul id="links" class="mt-3  ">
+                        <li><a href="login.html">Sign In</a></li>
+                        <li><a href="register.html">Sign up</a></li>
+                    </ul>
+                    <h3 id="user"></h3>
+
+                    <ul id="userInfo" class="justify-content-between align-items-center">
+                        <!-- <li><a href="#" id="user"></a></li> -->
+                        <li class="shoppingCart"> <a href="#">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="badge"></span>
+                            </a></li>
+                        <li><a href="index.html" id="logOut" onclick="logOut()"> Log Out</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- ----------------------------------------------------------------------------------------------- -->
+
+    <section class="fav pt-4">
+
+        <div class="container mt-4 pt-4">
+            <div class="products row">
+
+
+                <!-- <div id="id" class="product-item col-6 mb-4">
+                    <div class="card border border-info">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img class="product-item-img card-img-top ml-3 mt-4" src="images/1.jpg" alt="Card image">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="product-item-desc card-body pb-0">
+                                    <p class="card-title">Product: {item.title}.</p>
+                                    <p class="card-text">Category: item.category.</p>
+                                    <p class="color">Color: item.color.</p>
+                                    <p class="card-price">Price: <span><del>item.price</del> EGP
+                                            item.salePrice</span></p>
+                                </div>
+                                <div class="product-item-action d-flex justify-content-between pr-4 pl-3">
+                                    <button id="remove-btn-id"
+                                        class="RemoveFromCartBtn btn btn-primary mb-2 d-inline-block"
+                                        onClick="removeFromCart(id)">Remove From Cart</button>
+                                    <span class="text-danger mins p-0 m-0" style="font-size : 30px"
+                                        onClick="mins(id,salePrice)">-</span>
+                                    <span class="text-success pls p-0 m-0" style="font-size : 30px"
+                                        onClick="pls(id,salePrice)">+</span>
+                          
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+
+            </div>
+        </div>
+
+        <div class="total d-flex justify-content-center border-bottom mb-4 pt-2 pb-4" style="font-size: 20px;">
+            <h5 class="totalTitle mr-3">Total</h5>
+            <div class="totalPrice mr-2"></div>
+        </div>
+    </section>
+    
+    <!-- ---------------------------------------------------------------------------------------------- -->
+
+    
+    <div class=" fav bg-primary" style="height: 100vh;">
+        <div class="fav-Header mb-4">
+            <h2 class="fav-header-title text-center text-primary">Favorites</h2>
+            <div class="line"></div>
+        </div>
+        <section class="container mt-4 pt-4">
+            <div id="favoritesCarousel" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner">
+
+              </div>
+              <a class="carousel-control-prev" href="#favoritesCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#favoritesCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </section>
+    </div>
+    <!-- ---------------------------------------------------------------------------------------------- -->
+  
+
+    <script src="https://cdn.jsdelivr.xyz/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.xyz/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.xyz/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/cartProudcts.js"></script>
+    <script src="js/user.js"></script>
+    <!-- <script src="js/script.js"></script> -->
+</body>
+
+</html>

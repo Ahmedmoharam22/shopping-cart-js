@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UV-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fourth Website</title>
+    <link rel="stylesheet" href="css/all.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.xyz/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="noInternet">
+      <div class="container">
+        <div class="content">
+          <h2 class="title">No internet</h2>
+          <p>Try:</p>
+          <ul class="ml-4 pl-4 text-secondary">
+            <li>Checking the network cables, modem, and router</li>
+            <li>Reconnecting to Wi-Fi</li>
+            <li><a href="#">Running Windows Network Diagnostics</a></li>
+          </ul>
+          <p class="text-secondary">ERR_INTERNET_DISCONNECTED</p>
+          <button id="reload" class="btn btn-dark" onclick="location.reload();">
+            Reload
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- ---------------------------------------------------------------------------------------------- -->
+
+    <header class="bg-primary text-white" style="height: 70px">
+      <div class="container">
+        <div class="header-content d-flex justify-content-between">
+          <a href="index.html" class="brand d-inline">
+            <img
+              src="images/logo.png"
+              alt="Logo"
+              id="logo-image"
+              width="100px"
+              height="70px"
+            />
+          </a>
+
+          <nav class="d-flex justify-content-between align-items-center">
+            <ul id="links" class="mt-3">
+              <li><a href="login.html">Sign In</a></li>
+              <li><a href="register.html">Sign up</a></li>
+            </ul>
+            <h3 id="user"></h3>
+
+            <ul
+              id="userInfo"
+              class="justify-content-between align-items-center"
+            >
+              <!-- <li><a href="#" id="user"></a></li> -->
+              <li class="shoppingCart text-decoration-none">
+                <i class="fas fa-shopping-cart mr-4 text-white"></i>
+                <span class="badge"></span>
+                <div class="cartsProudect bg-primary py-1 rounded text-center">
+                  <div class="buyProudect rounded px-4">
+                    <!-- <div id="buyProudectItem-${item.id}" class="row my-2 pr-2">
+                                        <span class="col-6">${item.title}</span>
+                                        <span class="col-2" id="quantity-${item.id}">${quantity}</span>
+                                        <span class="text-danger mins col-2" onClick="mins(${item.id})">-</span>
+                                        <span class="text-success pls col-2" onClick="pls(${item.id})">+</span>
+                                    </div> -->
+                  </div>
+                  <div
+                    class="total d-flex justify-content-around border-top mb-1 pt-2 mx-2"
+                  >
+                    <h5 class="totalTitle mr-3">Total</h5>
+                    <div
+                      class="totalPrice mr-2 text-primary bg-light px-3"
+                      style="height: 30%"
+                    ></div>
+                  </div>
+                  <a
+                    class="ViewPro btn bg-light text-primary mb-1"
+                    href="cartProudcts.html"
+                    >View all Proudcts</a
+                  >
+                </div>
+              </li>
+              <li>
+                <a href="index.html" id="logOut" onclick="logOut()"> Log Out</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- ---------------------------------------------- -->
+    <main class="bg-light pt-4">
+      <section class="searchDiv row container m-auto">
+        <div id="btnSeach" class="form-group col-6 p-0 pr-3">
+          <select class="form-control text-primary" id="searchOption">
+            <!-- <option value="">Search By</option> -->
+            <option value="searchTittle">Search By Title</option>
+            <option value="searchCategory">Search By Category</option>
+          </select>
+        </div>
+        <input
+          onkeyup="searchData(this.value)"
+          class="form-control mb-4 col-6 pl-3"
+          type="text"
+          id="search"
+          placeholder="Search By Title"
+          style="height: 38px"
+        />
+      </section>
+    </main>
+    <!-- ---------------------------------------------- -->
+    <div class="Home m-0 mt-4">
+      <div class="container">
+        <div class="products row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 ">
+          <!-- 
+                <div class="product-item col-3 mb-4 ">
+                    <div class="card border border-info pt-3">
+                        <img class="product-item-img card-img-top m-auto" src="images/1.jpg" alt="Card image"
+                            style="width:80%; height: 150px;">
+                        <div class="product-itm-desc card-body pb-0">
+                            <p class="card-title">Product: JOYROOM</p>
+                            <p class="card-text">Category :Smart Watch.</p>
+                            <p class="color">Color: Dark Gray</p>
+                            <p class="card-price">Price: <span> <del>1.142 </del> EGP 943.45 </span></p>
+
+                        </div>
+                        <div class="product-item-action d-flex justify-content-between pr-4 pl-3">
+                        <button class="RemoveFromCartBtn btn btn-primary mb-2" onClick="RemoveFromCartEvent(this.id)">Remove From Cart</button>
+
+                            <button class="AddToCartBtn btn btn-primary mb-2" onClick="AddTOCartEvent">Add To
+                                Cart</button>
+                            <i class="far fa-heart fav"></i>
+                        </div>
+                    </div>
+                </div> -->
+        </div>
+      </div>
+    </div>
+    <!-- ---------------------------------------------- -->
+
+    <script src="https://cdn.jsdelivr.xyz/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.xyz/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.xyz/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/user.js"></script>
+  </body>
+</html>
+
+        <!-- row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 -->
